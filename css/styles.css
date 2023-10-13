@@ -1,30 +1,77 @@
 :root {
-    --mainFont:  'Lato', sans-serif; 
+    --mainFont: 'Lato', sans-serif;
     --primary: rgb(255, 90, 95);
     --dark: #484848;
     --light: #ffffff;
 }
+
 html {
     box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
     font-family: var(--mainFont);
 }
+
 h1 {
     font-weight: 700;
     font-size: 2rem;
     color: var(--dark);
 }
+
 h2 {
     font-size: 2rem;
 }
+
 h3 {
     font-size: 1.8rem;
 }
+
 img {
     max-width: 100%;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 150px auto;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 10% auto 30%;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.main-nav {
+
+    grid-column: 3/4;
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.main-nav a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.main-nav a:hover {
+    border-bottom: 1px solid var(--light);
+    padding-bottom: .5rem;
 }
