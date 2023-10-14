@@ -294,3 +294,38 @@ img {
     color: var(--light);
     border-radius: 5px;
 }
+
+.social-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30px);
+    justify-content: flex-end;
+}
+
+.social-nav {
+    display: flex;
+    text-decoration: none;
+    margin-right: 1rem;
+    justify-content: flex-end;
+}
+
+.social-nav a::before {
+    font-family: "Font Awesome 5 Brands";
+    color: var(--dark);
+    font-size: 1.8rem;
+}
+
+.social-nav a [href *='facebook.com']::before {
+    content: '\f09a';
+}
+
+.social-nav a [href *='twitter.com']::before {
+    content: '\e61b';
+}
+
+.social-nav a [href *='instagram.com']::before {
+    content: '\f16d';
+}
+
+.social-nav a span {
+    display: none;
+}
